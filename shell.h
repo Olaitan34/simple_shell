@@ -1,5 +1,9 @@
 #ifndef SHELL_H
 #define SHELL_H
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9656c011f88a68123be082c9389745f1cfc00c9e
 #include <string.h>
 #include <stddef.h>
 #include <errno.h>
@@ -12,6 +16,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "macro.h"
+<<<<<<< HEAD
 /**
 * @struct info
 * @brief Represents information related to a program execution.
@@ -47,6 +52,35 @@ int (*function)(data_of_program *data);
 int builtin_set_env(data_of_program *data);
 int builtin_unset_env(data_of_program *data);
 int builtin_env(data_of_program *data);
+=======
+
+
+typedef struct info
+{
+	char *program_name;
+	char *input_line;
+	char data_struct;
+	char *command_name;
+	int exec_counter;
+	int file_descriptor;
+	char **tokens;
+	char **env;
+	char **alias_list;
+} data_of_program;
+
+
+
+typedef struct builtins
+{
+		char *builtin;
+			int (*function)(data_of_program *data);
+} builtins;
+int builtin_set_env(data_of_program *data);
+int builtin_unset_env(data_of_program *data);
+
+int builtin_env(data_of_program *data);
+
+>>>>>>> 9656c011f88a68123be082c9389745f1cfc00c9e
 void tokenize(data_of_program *data);
 char *_strtok(char *line, char *delim);
 int builtin_cd(data_of_program *data);
@@ -89,5 +123,10 @@ int _printe(char *string);
 int _print_error(int errorcode, data_of_program *data);
 void tokenize(data_of_program *data);
 char *_strtok(char *line, char *delim);
+<<<<<<< HEAD
 #endif
 
+=======
+
+#endif
+>>>>>>> 9656c011f88a68123be082c9389745f1cfc00c9e
