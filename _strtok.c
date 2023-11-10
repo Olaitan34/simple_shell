@@ -2,8 +2,8 @@
 /**
 * _strtok - this is to separates strings with del
 * @line: this is a pointer to array we receive in getline.
- * @delim: this is  characters used to mark off string in parts.
- * Return: returns a pointer to the created token
+* @delim: this is  characters used to mark off string in parts.
+* Return: returns a pointer to the created token
 */
 char *_strtok(char *line, char *delim)
 {
