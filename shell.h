@@ -1,5 +1,6 @@
 #ifndef SHELL_H
 #define SHELL_H
+
 #include <string.h>
 #include <stddef.h>
 #include <errno.h>
@@ -12,15 +13,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "macro.h"
-/**
-* struct info -  Represents information related to a program execution.
-*
-* This structure holds various details about
-* a program's execution, including
-* program name, input line, data structure placeholder, command name,
-* execution counter, file descriptor, arrays of tokens,
-* environment variables,and aliases.
-*/
+
+
 typedef struct info
 {
 char *program_name;
@@ -33,18 +27,19 @@ char **tokens;
 char **env;
 char **alias_list;
 } data_of_program;
-/**
-* struct builtins -  Represents a built-in command with
-* its associated function pointer.
-*/
+
+
+
 typedef struct builtins
 {
-char *builtin;
-int (*function)(data_of_program *data);
+	char *builtin;
+	int (*function)(data_of_program *data);
 } builtins;
 int builtin_set_env(data_of_program *data);
 int builtin_unset_env(data_of_program *data);
+
 int builtin_env(data_of_program *data);
+
 void tokenize(data_of_program *data);
 char *_strtok(char *line, char *delim);
 int builtin_cd(data_of_program *data);
@@ -87,5 +82,5 @@ int _printe(char *string);
 int _print_error(int errorcode, data_of_program *data);
 void tokenize(data_of_program *data);
 char *_strtok(char *line, char *delim);
-#endif
 
+#endif
