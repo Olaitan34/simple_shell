@@ -107,7 +107,7 @@ void sisifo(data_of_program *data)
 
 	while (++(data->exec_counter))
 	{
-		_print("Ola&Sara¬$ ");
+		_print("$");
 
 		error = len = _getline(data);
 
