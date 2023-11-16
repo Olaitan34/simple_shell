@@ -9,21 +9,23 @@
 
 int builtin_exit(data_of_program *data)
 {
-int a;
+	int a;
 
-if (data->tokens[1] != NULL)
-{
-for (a = 0; data->tokens[1][a]; a++)
-if ((data->tokens[1][a] < '0' || data->tokens[1][a] > '9')
-&& data->tokens[1][a] != '+')
-{
-errno = 2;
-return (2);
-}
-errno = _atoi(data->tokens[1]);
-}
-free_all_data(data);
-exit(errno);
+	if (data->tokens[1] != NULL)
+	{
+		for (a = 0; data->tokens[1][a]; a++)
+		{
+			if ((data->tokens[1][a] < '0' || data->tokens[1][a] > '9')
+			&& data->tokens[1][a] != '+')
+			{
+				errno = 2;
+				return (2);
+			}
+			errno = _atoi(data->tokens[1]);
+		}
+	}
+	free_all_data(data);
+	exit(errno);
 }
 
 /**
