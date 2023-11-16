@@ -19,7 +19,7 @@ void sisifo(data_of_program *data)
 		if (error == EOF)
 		{
 			free_all_data(data);
-			exit(errno); 
+			exit(errno);
 		}
 		if (len >= 1)
 		{
@@ -27,7 +27,7 @@ void sisifo(data_of_program *data)
 			expand_variables(data);
 			tokenize(data);
 			if (data->tokens[0])
-			{ 
+			{
 				error = execute(data);
 				if (error != 0)
 					_print_error(error, data);

@@ -61,7 +61,7 @@ void str_reverse(char *string)
 	while (a < size)
 	{
 		hld = string[a];
-		string[a++]= string[size];
+		string[a++] = string[size];
 		string[size--] = hld;
 	}
 }
