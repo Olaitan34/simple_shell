@@ -36,8 +36,7 @@ int _getline(data_of_program *data)
 			command[i] = str_duplicate(_strtok(i ? NULL : buff, "\n;"));
 			/*this checks and split for && and || operators*/
 			i = check_logic_ops(command, i, oprt);
-		}
-		while (command[i++]);
+		} while (command[i++]);
 	}
 
 	/*this obtains the next command and remove it from the array*/

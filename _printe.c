@@ -4,10 +4,11 @@
 /**
  * _print -  Write an array of characters to standard output.
  *
- * This function is responsible for writing the provided array of characters to the standard output.
-
- * @param string - A pointer to the array of characters to be written.
- * @return The number of bytes written on success. On error, it returns -1, and sets the appropriate errno.
+ * This function is responsible for writing the provided array of
+ * characters to the standard output.
+ * @string: A pointer to the array of characters to be written.
+ *Return: The number of bytes written on success. On error,
+ *it returns -1, and sets the appropriate errno.
  */
 
 int _print(char *string)
@@ -19,10 +20,11 @@ int _print(char *string)
 /**
  *_printe -  Write an array of characters to the standard error stream.
  *
- * This function is used to write the provided array of characters to the standard error stream.
-
- * @string - A pointer to the array of characters to be written.
- * @return The number of bytes written on success. On error, it returns -1, and sets the appropriate errno.
+ * This function is used to write the provided array of
+ *characters to the standard error stream.
+ * @string: A pointer to the array of characters to be written.
+ * Return:The number of bytes written on success. On error,
+ *it returns -1, and sets the appropriate errno.
  */
 
 int _printe(char *string)

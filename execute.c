@@ -9,6 +9,7 @@ int execute(data_of_program *data)
 {
 	int RV = 0, waitstatus;
 	pid_t pidd;
+
 	RV = builtins_list(data);
 	if (RV != -1)/* checks if the program was found in built ins */
 		return (RV);
@@ -19,7 +20,7 @@ int execute(data_of_program *data)
 	}
 	else
 	{
-		pidd = fork(); 
+		pidd = fork();
 		if (pidd == -1)
 		{ /* checks if the fork call failed */
 			perror(data->command_name);
