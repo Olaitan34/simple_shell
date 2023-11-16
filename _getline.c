@@ -43,7 +43,7 @@ int check_logic_ops(char *array_commands[], int i, char array_operators[])
 			free(temp);
 			j = 0;
 		}
-	}	
+	}
 	return (i);
 }
 
@@ -63,7 +63,8 @@ int _getline(data_of_program *data)
 	ssize_t bytes_read, i = 0;
 
 	/* this checks the logical operators */
-	if (!command[0] || (oprt[0] == '&' && errno != 0) || (oprt[0] == '|' && errno == 0))
+	if (!command[0] || (oprt[0] == '&' && errno != 0) 
+	|| (oprt[0] == '|' && errno == 0))
 	{
 	/*this is to free the memory allocated in the array if there is any */
 		for (i = 0; command[i]; i++)

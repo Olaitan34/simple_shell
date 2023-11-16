@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[], char *env[])
 {
-	data_of_program data_struct = {STDIN_FILENO}; 
+	data_of_program data_struct = {STDIN_FILENO};
 	data_of_program *data = &data_struct;
 
 	initialize_data(data, argc, argv, env);
