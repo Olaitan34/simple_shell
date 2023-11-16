@@ -8,8 +8,6 @@
 *
 * Return: returns index of the last command in the array_commands.
 */
-
-
 int check_logic_ops(char *array_commands[], int i, char array_operators[])
 {
 	char *temp = NULL;
@@ -46,8 +44,6 @@ int check_logic_ops(char *array_commands[], int i, char array_operators[])
 	}
 	return (i);
 }
-
-
 /**
 * _getline - Function that reads one line from the prompt.
 * @data: pointer to the data of the program

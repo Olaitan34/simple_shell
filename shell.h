@@ -50,7 +50,7 @@ int builtin_alias(data_of_program *data);
 void sisifo(data_of_program *data);
 void initialize_data(data_of_program *data, int arc, char *argv[], char **env);
 void handle_ctrl_c(int opr UNUSED);
-int check_logic_ops(char *array_commands[], int i, char array_operators[]);
+int check_logic_ops(char *array_commands[], int i, char array_operator[]);
 int _getline(data_of_program *data);
 int str_length(char *string);
 char *str_duplicate(char *string);
