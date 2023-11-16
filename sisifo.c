@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
  * sisifo - Function which is an infinite loop that shows the prompt
- * @prompt: variable carrying the prompt to be printed
+ *
  * @data: variable carrying an infinite loop that shows the prompt
  */
 

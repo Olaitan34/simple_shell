@@ -33,15 +33,16 @@ void free_all_data(data_of_program *data)
 	free_array_of_pointers(data->env);
 	free_array_of_pointers(data->alias_list);
 }
+
 /**
- * free_array_of_pointers - Function that frees pointer of an array of pointers and the
- * array
- * @array: array of pointers
- * Return: 0
+ * free_array_of_pointers - Function that frees pointer of array.
+ * @array: array of pointers.
+ * Return: 0.
  */
 void free_array_of_pointers(char **array)
 {
 	int a;
+
 	if (array != NULL)
 	{
 		for (a = 0; array[a]; a++)

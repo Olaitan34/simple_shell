@@ -14,7 +14,18 @@
 #include <stdlib.h>
 #include "macro.h"
 
-
+/**
+ * struct info- Function that is structure for the program's data
+ * @program_name: This is the name of the executable
+ * @input_line:This is the pointer to input read for _getline
+ * @command_name: This is the pointer to first command typed by the user
+ * @exec_counter: This is the number of excecuted comands
+ * @file_descriptor: This is the file descriptor to input of commands
+ * @tokens: This is the pointer to array of tokenized input
+ * @env: This is the copy of the environ
+ * @alias_list: This is array of pointers with aliases.
+ * @data_struct: this is a character structure.
+ */
 typedef struct info
 {
 char *program_name;
@@ -28,7 +39,11 @@ char **env;
 char **alias_list;
 } data_of_program;
 
-
+/**
+ * struct builtins - Function that is the structure for builtins
+ * @builtin: This is the name of the builtin
+ * @function: This is the associated function to be called for each builtin
+ */
 
 typedef struct builtins
 {
