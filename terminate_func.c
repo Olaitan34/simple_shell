@@ -1,12 +1,10 @@
 #include "shell.h"
 
 /**
- * builtin_exit - Function to terminate the program with a specified status code.
- *
- * This function is responsible for gracefully terminating the program with the specified exit status code.
+ * builtin_exit - Function to terminate.
  *
  * @param data - The program's data structure.
- * @return 0 if the function successfully terminates the program, otherwise, it returns an error code.
+ * @return 0 if the function successfully.
  */
 
 int builtin_exit(data_of_program *data)
