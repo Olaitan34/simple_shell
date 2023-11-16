@@ -15,7 +15,7 @@ int _getline(data_of_program *data)
 	ssize_t bytes_read, i = 0;
 
 	/* this checks the logical operators */
-	if (!command[0] || (oprt[0] == '&' && errno != 0) 
+	if (!command[0] || (oprt[0] == '&' && errno != 0)
 	|| (oprt[0] == '|' && errno == 0))
 	{
 	/*this is to free the memory allocated in the array if there is any */
@@ -32,8 +32,7 @@ int _getline(data_of_program *data)
 
 		/* this split lines for a new line or ; */
 		i = 0;
-		do 
-		{
+		do {
 			command[i] = str_duplicate(_strtok(i ? NULL : buff, "\n;"));
 			/*this checks and split for && and || operators*/
 			i = check_logic_ops(command, i, oprt);
