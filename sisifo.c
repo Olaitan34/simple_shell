@@ -5,14 +5,14 @@
  * @data: variable carrying an infinite loop that shows the prompt
  */
 
-void sisifo(data_of_program *data)
+void sisifo(char *prompt, data_of_program *data)
 {
 	int error = 0;
 	int len = 0;
 
 	while (++(data->exec_counter))
 	{
-		_print("$");
+		_print(prompt);
 
 		error = len = _getline(data);
 

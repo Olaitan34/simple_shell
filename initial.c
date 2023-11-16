@@ -8,7 +8,7 @@
 void handle_ctrl_c(int opr UNUSED)
 {
 	_print("\n");
-	_print("$ ");
+	_print(PROMPT_MSG);
 }
 
 

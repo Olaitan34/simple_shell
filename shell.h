@@ -62,7 +62,7 @@ int builtin_exit(data_of_program *data);
 int set_work_directory(data_of_program *data, char *new_dir);
 int builtin_help(data_of_program *data);
 int builtin_alias(data_of_program *data);
-void sisifo(data_of_program *data);
+void sisifo(char *prompt, data_of_program *data);
 void initialize_data(data_of_program *data, int arc, char *argv[], char **env);
 void handle_ctrl_c(int opr UNUSED);
 int check_logic_ops(char *array_commands[], int i, char array_operator[]);
